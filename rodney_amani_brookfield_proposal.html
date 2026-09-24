@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rodney Amani — coding and digital skills instructor. Proposal for a practical coding extracurricular programme at Brookfield Academy.">
+<title>Rodney Amani | Coding Programme Proposal for Brookfield Academy</title>
+<style>
+:root{--ink:#101828;--muted:#667085;--blue:#2563eb;--cyan:#06b6d4;--green:#16a34a;--paper:#f7f9fc;--line:#e5e7eb;--white:#fff;--dark:#0b1220;--shadow:0 18px 55px rgba(16,24,40,.10);--r:24px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navbar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;display:flex;align-items:center;gap:11px}
+.logo-box{height:40px;width:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;font-family:monospace;font-weight:900}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.9rem;font-weight:700}
+.navlinks a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.2s}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 25px rgba(37,99,235,.2)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--line)}
+.hero{color:#fff;background:radial-gradient(circle at 82% 12%,rgba(6,182,212,.25),transparent 28%),radial-gradient(circle at 10% 90%,rgba(37,99,235,.25),transparent 35%),linear-gradient(135deg,#07101f,#12223c 60%,#0d3043);padding:100px 0 105px;overflow:hidden;position:relative}
+.hero:after{content:"</>";position:absolute;right:3%;top:6%;font:900 240px/1 monospace;color:rgba(255,255,255,.045);transform:rotate(-8deg)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:65px;align-items:center}
+.badge{display:inline-flex;border:1px solid rgba(255,255,255,.17);background:rgba(255,255,255,.07);color:#bcefff;padding:7px 12px;border-radius:999px;font-size:.76rem;font-weight:900;letter-spacing:1px;margin-bottom:22px}
+h1{font-size:clamp(3rem,6.5vw,5.8rem);line-height:.96;letter-spacing:-4px;margin-bottom:24px}
+.gradient{background:linear-gradient(90deg,#60a5fa,#67e8f9,#86efac);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:700px;color:#c8d4e7;font-size:1.1rem;margin-bottom:30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn-light{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
+.profile-card{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:30px;box-shadow:0 35px 80px rgba(0,0,0,.28);backdrop-filter:blur(10px)}
+.avatar{width:76px;height:76px;border-radius:22px;background:linear-gradient(135deg,#2563eb,#06b6d4);display:grid;place-items:center;color:#fff;font-size:1.8rem;font-weight:900;margin-bottom:20px}
+.profile-card h2{font-size:1.55rem;letter-spacing:-.7px;margin-bottom:5px}
+.profile-card .role{color:#8deaf8;font-weight:800;margin-bottom:20px}
+.profile-meta{display:grid;gap:11px;color:#c5d1e4;font-size:.92rem}
+.profile-meta strong{color:#fff}
+section{padding:92px 0}
+.kicker{text-transform:uppercase;color:var(--blue);font-size:.75rem;letter-spacing:1.7px;font-weight:900;margin-bottom:9px}
+h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.08;letter-spacing:-1.8px;margin-bottom:15px}
+.section-head{max-width:760px;margin-bottom:45px}
+.section-head p{color:var(--muted);font-size:1.04rem}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}
+.about-box{background:var(--paper);border:1px solid var(--line);padding:30px;border-radius:var(--r)}
+.about-box h3{margin-bottom:8px}
+.about-box p{color:var(--muted)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.fact{padding:15px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.fact small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;font-weight:900;letter-spacing:.7px}
+.fact strong{display:block;margin-top:2px}
+.proposal{background:var(--paper)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:0 7px 25px rgba(16,24,40,.035)}
+.card h3{margin-bottom:8px;font-size:1.15rem}
+.card p{color:var(--muted)}
+.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#edf4ff;color:var(--blue);font-size:1.35rem;margin-bottom:18px}
+.list{list-style:none;display:grid;gap:11px;margin-top:19px}
+.list li{display:flex;gap:10px;color:#475467}
+.tick{color:var(--green);font-weight:900}
+.dark{background:var(--dark);color:#fff}
+.dark .section-head p{color:#9eacc0}
+.skills{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+.skill{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:22px 15px;text-align:center}
+.skill b{display:block;font-size:1.05rem}.skill span{font-size:.8rem;color:#9aa9bd}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.project{background:#111c2d;border:1px solid rgba(255,255,255,.09);padding:23px;border-radius:18px}
+.project h3{margin-bottom:6px}.project p{color:#9eacc0;font-size:.9rem}
+.careers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.career{border:1px solid var(--line);border-radius:20px;padding:25px;background:#fff}
+.career h3{margin:7px 0}.career p{color:var(--muted);font-size:.91rem}
+.setup{background:linear-gradient(135deg,#eff6ff,#effdf7)}
+.price-wrap{display:grid;grid-template-columns:1fr .8fr;gap:25px;align-items:stretch}
+.price-card{background:#fff;border:1px solid #dce5f1;border-radius:28px;padding:36px;box-shadow:var(--shadow)}
+.price-tag{display:inline-block;padding:5px 10px;background:#dcfce7;color:#087443;border-radius:999px;font-size:.72rem;font-weight:900}
+.price{font-size:3.2rem;letter-spacing:-2px;font-weight:900;margin-top:10px}.price small{font-size:.9rem;color:var(--muted);letter-spacing:0;font-weight:600}
+.price-card p{color:var(--muted)}
+.note{padding:28px;border-radius:24px;background:#0e1b2e;color:#fff}
+.note p{color:#aebbd0}.note h3{margin-bottom:8px}
+.cta{text-align:center;background:linear-gradient(135deg,#0b1220,#12243a);color:#fff}
+.cta p{max-width:700px;margin:0 auto 28px;color:#afbdd1}
+.contact{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.contact a{padding:10px 15px;border:1px solid rgba(255,255,255,.1);border-radius:10px;background:rgba(255,255,255,.06);color:#dbe5f3}
+footer{text-align:center;background:#070d17;color:#6f7e95;padding:28px;font-size:.82rem}
+@media(max-width:900px){.hero-grid,.about,.price-wrap{grid-template-columns:1fr}.skills{grid-template-columns:repeat(3,1fr)}.careers,.project-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.navlinks,.nav .btn{display:none}.hero{padding:72px 0}.hero:after{font-size:130px}.two{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.careers,.project-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr}section{padding:70px 0}h1{letter-spacing:-2.5px}}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="container navbar">
+<a class="logo" href="#home"><span class="logo-box">&lt;/&gt;</span><span>Rodney Amani</span></a>
+<nav class="navlinks">
+<a href="#about">About Me</a><a href="#proposal">My Proposal</a><a href="#programme">Programme</a><a href="#investment">Pricing</a>
+</nav>
+<a class="btn btn-primary" href="mailto:rodneyamani99@gmail.com?subject=Coding%20Programme%20Proposal">Contact Me</a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="badge">A PERSONAL PROPOSAL FOR BROOKFIELD ACADEMY</div>
+<h1>I'm <span class="gradient">Rodney Amani.</span><br>I want to teach the next generation to code.</h1>
+<p>
+I am proposing a practical coding and digital skills extracurricular programme for students at
+<strong>Brookfield Academy</strong> — giving young learners the opportunity to create websites, understand programming,
+solve problems and discover what they can build with technology.
+</p>
+<div class="actions">
+<a class="btn btn-primary" href="#proposal">Explore My Proposal →</a>
+<a class="btn btn-light" href="#about">Meet Rodney</a>
+</div>
+</div>
+<div class="profile-card">
+<div class="avatar">RA</div>
+<h2>Rodney Amani</h2>
+<div class="role">Coding & Digital Skills Instructor</div>
+<div class="profile-meta">
+<div>🎓 <strong>Moringa School graduate</strong></div>
+<div>💻 <strong>Web development & programming</strong></div>
+<div>🧑‍🎓 <strong>Proposed audience: young learners</strong></div>
+<div>🏫 <strong>Proposed school: Brookfield Academy</strong></div>
+<div>📍 <strong>Kenya</strong></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div>
+<div class="kicker">About Me</div>
+<h2>The person behind the programme.</h2>
+<p style="color:var(--muted)">
+My name is <strong>Rodney Amani</strong>. I am a 21-year-old Moringa School graduate with a strong interest
+in software development and technology. I want to use the skills I have developed to introduce young people
+to coding in a practical, engaging and approachable way.
+</p>
+</div>
+<div class="about-box">
+<h3>My approach</h3>
+<p>
+Students should not only learn what code means — they should use it to make something. My proposed lessons
+would combine short explanations, guided practice, challenges and projects so students can see their progress
+and build confidence as they learn.
+</p>
+<div class="facts">
+<div class="fact"><small>Name</small><strong>Rodney Amani</strong></div>
+<div class="fact"><small>Age</small><strong>21</strong></div>
+<div class="fact"><small>Education</small><strong>Moringa School</strong></div>
+<div class="fact"><small>Focus</small><strong>Software & Web Development</strong></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="proposal" id="proposal">
+<div class="container">
+<div class="section-head">
+<div class="kicker">The Proposal</div>
+<h2>Bring coding in as a Brookfield Academy extracurricular activity.</h2>
+<p>
+Brookfield Academy does not currently have this programme. I am proposing that the school consider
+introducing a structured coding and digital skills club/activity for interested students.
+</p>
+</div>
+<div class="two">
+<div class="card">
+<div class="icon">🎯</div>
+<h3>What I am proposing</h3>
+<p>A practical programme where students progressively learn programming and web development through projects.</p>
+<ul class="list">
+<li><span class="tick">✓</span> Weekly extracurricular sessions</li>
+<li><span class="tick">✓</span> Beginner-friendly lessons</li>
+<li><span class="tick">✓</span> Hands-on coding exercises</li>
+<li><span class="tick">✓</span> Individual and group projects</li>
+<li><span class="tick">✓</span> Student project presentations</li>
+</ul>
+</div>
+<div class="card">
+<div class="icon">💡</div>
+<h3>Why it can benefit students</h3>
+<p>Coding provides a practical way to develop digital confidence alongside creativity and structured problem-solving.</p>
+<ul class="list">
+<li><span class="tick">✓</span> Logical and analytical thinking</li>
+<li><span class="tick">✓</span> Creativity and independent learning</li>
+<li><span class="tick">✓</span> Digital literacy</li>
+<li><span class="tick">✓</span> Collaboration and communication</li>
+<li><span class="tick">✓</span> Early exposure to technology careers</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="dark" id="programme">
+<div class="container">
+<div class="section-head">
+<div class="kicker">What I Will Teach</div>
+<h2>From a first webpage to real programming.</h2>
+<p>
+The curriculum can be adjusted for different age groups and ability levels. The goal is to make every stage practical.
+</p>
+</div>
+<div class="skills">
+<div class="skill"><b>HTML</b><span>Web structure</span></div>
+<div class="skill"><b>CSS</b><span>Design & layouts</span></div>
+<div class="skill"><b>JavaScript</b><span>Interactivity</span></div>
+<div class="skill"><b>Python</b><span>Programming logic</span></div>
+<div class="skill"><b>Git & GitHub</b><span>Project workflow</span></div>
+</div>
+<div class="project-grid">
+<div class="project"><h3>🌐 Personal Website</h3><p>Students build a simple webpage introducing themselves, their interests or a project.</p></div>
+<div class="project"><h3>🎮 Mini Interactive Project</h3><p>Students use programming logic to make a small interactive experience or game.</p></div>
+<div class="project"><h3>🚀 Final Project</h3><p>Students plan, build and present a project that demonstrates what they have learned.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head">
+<div class="kicker">Future Pathways</div>
+<h2>These skills can become a starting point for many careers.</h2>
+<p>Learning these foundations does not determine a student's future career. It gives them a base from which they can explore technology and other fields.</p>
+</div>
+<div class="careers">
+<div class="career"><div class="icon">🌐</div><h3>Web Developer</h3><p>Build and maintain websites and web applications.</p></div>
+<div class="career"><div class="icon">⚙️</div><h3>Software Developer</h3><p>Create applications and software products using programming.</p></div>
+<div class="career"><div class="icon">📱</div><h3>App Developer</h3><p>Progress from programming fundamentals into mobile development.</p></div>
+<div class="career"><div class="icon">🤖</div><h3>AI & Data</h3><p>Python can provide a foundation for later study in data and artificial intelligence.</p></div>
+<div class="career"><div class="icon">🛡️</div><h3>Cybersecurity</h3><p>Programming knowledge can support future cybersecurity learning.</p></div>
+<div class="career"><div class="icon">🎮</div><h3>Game Development</h3><p>Combine programming, logic and creativity to explore game development.</p></div>
+</div>
+</div>
+</section>
+
+<section class="setup">
+<div class="container">
+<div class="section-head">
+<div class="kicker">How It Could Work</div>
+<h2>A simple setup for the school.</h2>
+<p>The final structure, timetable and student age groups can be discussed with Brookfield Academy.</p>
+</div>
+<div class="two">
+<div class="card">
+<div class="icon">💻</div>
+<h3>Requirements from Brookfield Academy</h3>
+<ul class="list">
+<li><span class="tick">✓</span> Computer laboratory or suitable classroom</li>
+<li><span class="tick">✓</span> Computers/laptops for participating students</li>
+<li><span class="tick">✓</span> Internet access</li>
+<li><span class="tick">✓</span> Projector/display — recommended</li>
+<li><span class="tick">✓</span> Agreed extracurricular time slot</li>
+</ul>
+</div>
+<div class="card">
+<div class="icon">📚</div>
+<h3>Suggested format</h3>
+<ul class="list">
+<li><span class="tick">✓</span> 10–20 students per group</li>
+<li><span class="tick">✓</span> One session per week</li>
+<li><span class="tick">✓</span> 60–90 minutes per session</li>
+<li><span class="tick">✓</span> Approximately 4 sessions per month</li>
+<li><span class="tick">✓</span> Practical exercises + projects</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="investment">
+<div class="container price-wrap">
+<div>
+<div class="kicker">Proposed Investment</div>
+<h2>A starting point for discussion.</h2>
+<p style="color:var(--muted);max-width:620px">
+I understand that Brookfield Academy may have its own extracurricular policies, budgets and preferred structure.
+The figure below is therefore a starting proposal, not a fixed requirement.
+</p>
+<div style="margin-top:25px" class="note">
+<h3>Flexible & negotiable</h3>
+<p>
+The final fee can be discussed according to the number of students, number of sessions, programme scope,
+available facilities and what works best for the school.
+</p>
+</div>
+</div>
+<div class="price-card">
+<span class="price-tag">PROPOSED MONTHLY FEE</span>
+<div class="price">KSh 2,500 <small>/ student / month</small></div>
+<p>Suggested starting price for approximately four 60–90 minute sessions per month.</p>
+<ul class="list">
+<li><span class="tick">✓</span> Structured weekly lessons</li>
+<li><span class="tick">✓</span> Practical coding exercises</li>
+<li><span class="tick">✓</span> Student projects</li>
+<li><span class="tick">✓</span> Project presentations</li>
+<li><span class="tick">✓</span> Curriculum progression</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<div class="kicker" style="color:#67e8f9">Let's Discuss It</div>
+<h2>I'd like to give Brookfield students the opportunity to build with technology.</h2>
+<p>
+If the school is interested, I would welcome a meeting with the administration to discuss the programme,
+student groups, timetable, facilities, curriculum and final pricing.
+</p>
+<a class="btn btn-primary" href="mailto:rodneyamani99@gmail.com?subject=Brookfield%20Academy%20Coding%20Programme%20Proposal">Contact Rodney Amani →</a>
+<div class="contact">
+<a href="mailto:rodneyamani99@gmail.com">✉ rodneyamani99@gmail.com</a>
+<a href="tel:+254740961821">☎ 0740 961 821</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Rodney Amani • Coding & Digital Skills Programme Proposal • Prepared for Brookfield Academy</footer>
+</body>
+</html>
